@@ -1,0 +1,55 @@
+.card-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    height: 100px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+/* Style for selected question */
+.selected-question {
+    background-color: green; /* Background color for selected question */
+    color: white; /* Text color for selected question */
+}
+
+/* Style for selected answer */
+.selected-answer {
+    background-color: yellow; /* Background color for selected answer */
+    color: black; /* Text color for selected answer */
+}
+
+/* Style for correct answer */
+.correct-answer {
+    background-color: green; /* Background color for correct answer */
+    color: white; /* Text color for correct answer */
+}
+
+/* Style for disabled question */
+.question-translation.correct-answer {
+    pointer-events: none; /* Disable click events on correct questions */
+}
+
+/* Style for disabled answer */
+.answer-list .card.correct-answer {
+    pointer-events: none; /* Disable click events on correct answers */
+}
+.incorrect-answer {
+    background-color: red;
+    color: white;
+}
